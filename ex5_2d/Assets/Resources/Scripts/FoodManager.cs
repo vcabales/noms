@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Food might be colliding into each other
 public class FoodManager : MonoBehaviour {
     public Sprite[] spriteList;
     public float maxX;

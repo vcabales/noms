@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boundary {
     public float xMin, xMax;
@@ -16,6 +17,21 @@ public class PlayerController : MonoBehaviour {
     public float nextFire = 0.5f;
     public Sprite Win;
     public Sprite Lose;
+    public AudioSource MusicSource;
+    public AudioClip MusicClip;
+    private bool firstPlay;
+    private bool firstLoss;
+    private bool left;
+    private bool right;
+
+    private void Start()
+    {
+        MusicSource.clip = MusicClip;
+        firstPlay = true;
+        firstLoss = true;
+        right = true;
+        left = false;
+    }
 
     private void Update()
     {
@@ -24,8 +40,26 @@ public class PlayerController : MonoBehaviour {
             nextFire = Time.time + fireRate;
             Instantiate(gu, guTransform);
         }
-        if (ScoreManager.score == 30) {
+        if ((ScoreManager.score >= 20) && firstPlay) {
+            MusicSource.PlayOneShot(MusicClip);
             GetComponent<SpriteRenderer>().sprite = Win;
+            firstPlay = false;
+            SceneManager.LoadScene("WinScene"); // figure out how to wait to load scene, also not loading
+        }
+        if ((LifeManager.lives == 0) && firstLoss) {
+            GetComponent<SpriteRenderer>().sprite = Lose;
+            firstLoss = false;
+        }
+        if ((Input.GetAxis("Horizontal") > 0) && left) {
+            right = true;
+            left = false;
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        if ((Input.GetAxis("Horizontal") < 0) && right)
+        {
+            left = true;
+            right = false;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 

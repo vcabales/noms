@@ -89,6 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4295b2687c8d4ea6b03f69ee1bafe95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MusicSource: {fileID: 0}
+  MusicClip: {fileID: 8300000, guid: 5349555d8a7274ee79f10a4693e80eb6, type: 3}
 --- !u!212 &212858525582120234
 SpriteRenderer:
   m_ObjectHideFlags: 1

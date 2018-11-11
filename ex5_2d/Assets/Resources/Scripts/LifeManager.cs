@@ -1,13 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LifeManager : MonoBehaviour {
     public static int lives;
     public GameObject[] sprites;
     private int pastLives;
-    // Use this for initialization
+    public AudioSource MusicSource1;
+    public AudioSource MusicSource2;
+    public AudioClip MusicClip;
+    public AudioClip LosingClip;
+    private bool firstPlay;
+
     void Start () {
+        MusicSource1.clip = MusicClip;
+        MusicSource2.clip = LosingClip;
+        firstPlay = true;
         sprites = new GameObject[3];
         var s1 = Resources.Load("Prefabs/LifeSprite") as GameObject;
         var s2 = Resources.Load("Prefabs/LifeSprite1") as GameObject;
@@ -28,12 +37,19 @@ public class LifeManager : MonoBehaviour {
         if (pastLives > lives) {
             Destroy(sprites[pastLives]);
             pastLives = lives;
+            MusicSource1.PlayOneShot(MusicClip);
         }
-        if (pastLives == 0) {
-            Debug.Log("Player loses");
-            Destroy(sprites[0]);
+        if (pastLives == 0)
+        {
+            if (firstPlay) {
+                MusicSource2.PlayOneShot(LosingClip);
+                Destroy(sprites[0]);
+                firstPlay = false;
+                SceneManager.LoadScene("LoseScene");
+            }
         }
-        
+
+
     }
 
 }
