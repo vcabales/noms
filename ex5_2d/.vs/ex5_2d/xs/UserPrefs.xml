@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{B9414C48-BB05-3BBF-DD4B-8937C2581515}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Scripts/GuMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Scripts/Collision.cs">
     <Files>
-      <File FileName="Assets/Resources/Scripts/FoodManager.cs" Line="12" Column="58" />
-      <File FileName="Assets/Resources/Scripts/Collision.cs" Line="10" Column="31" />
+      <File FileName="Assets/Resources/Scripts/FoodManager.cs" Line="14" Column="39" />
+      <File FileName="Assets/Resources/Scripts/Collision.cs" Line="6" Column="12" />
       <File FileName="Assets/Resources/Scripts/GuMovement.cs" Line="17" Column="53" />
-      <File FileName="Assets/Resources/Scripts/PlayerController.cs" Line="10" Column="24" />
+      <File FileName="Assets/Resources/Scripts/PlayerController.cs" Line="15" Column="29" />
+      <File FileName="Assets/Resources/Scripts/ScoreManager.cs" Line="23" Column="38" />
+      <File FileName="Assets/Resources/Scripts/LifeManager.cs" Line="11" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour {
     public Transform guTransform;
     public float fireRate = 0.5f;
     public float nextFire = 0.5f;
+    public Sprite Win;
+    public Sprite Lose;
 
     private void Update()
     {
@@ -22,11 +24,14 @@ public class PlayerController : MonoBehaviour {
             nextFire = Time.time + fireRate;
             Instantiate(gu, guTransform);
         }
+        if (ScoreManager.score == 30) {
+            GetComponent<SpriteRenderer>().sprite = Win;
+        }
     }
 
     private void FixedUpdate()
     {
-        speed = 4f;
+        speed = 5f;
         boundary = new Boundary();
         boundary.xMax = Camera.main.transform.position.x+8f; // Figure out how to adjust this
         boundary.xMin = -Camera.main.transform.position.x-8f;

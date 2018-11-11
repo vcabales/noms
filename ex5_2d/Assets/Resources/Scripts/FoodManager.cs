@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FoodManager : MonoBehaviour {
     public Sprite[] spriteList;
-    public GameObject nom;
     public float maxX;
     public float minX;
     public GameObject Food;
