@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour {
             firstPlay = false;
             SceneManager.LoadScene("WinScene"); // figure out how to wait to load scene, also not loading
         }
-        if ((LifeManager.lives == 0) && firstLoss) {
+        if ((LifeManager.lives < 0) && firstLoss) {
             GetComponent<SpriteRenderer>().sprite = Lose;
             firstLoss = false;
         }

@@ -13,7 +13,7 @@ public class PlayAudio : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (ScoreManager.score >= 5)
+        if (ScoreManager.score >= 20)
             MusicSource.Stop();
 	}
 }

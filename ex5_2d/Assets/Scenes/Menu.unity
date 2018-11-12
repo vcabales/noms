@@ -285,7 +285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.7000122, y: -41.450005}
+  m_AnchoredPosition: {x: -0.7000122, y: -55.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &716671250
@@ -713,8 +713,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: -19.3}
-  m_SizeDelta: {x: 367.8, y: 145.9}
+  m_AnchoredPosition: {x: -0.9, y: -24.3}
+  m_SizeDelta: {x: 343.5, y: 159.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1189966432
 MonoBehaviour:
@@ -749,8 +749,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Welcome to NOMS! The objective of this game, much like my objective in real
-    life, is to catch as much free food as possible. If you win, you get a random
-    compliment from a compliment generator! Enjoy and have a nice day! :)
+    life, is to catch as much free food as possible. You can also throw mushrooms
+    by pressing the space bar. If you win, you get a random compliment from a compliment
+    generator!
 --- !u!222 &1189966433
 CanvasRenderer:
   m_ObjectHideFlags: 0

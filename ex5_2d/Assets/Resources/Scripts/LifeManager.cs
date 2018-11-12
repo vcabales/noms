@@ -34,21 +34,21 @@ public class LifeManager : MonoBehaviour {
 	}
     private void Update()
     {
-        if (pastLives > lives) {
-            Destroy(sprites[pastLives]);
-            pastLives = lives;
-            MusicSource1.PlayOneShot(MusicClip);
-        }
-        if (pastLives == 0)
+        if (lives < 0)
         {
-            if (firstPlay) {
+            if (firstPlay)
+            {
                 MusicSource2.PlayOneShot(LosingClip);
                 Destroy(sprites[0]);
                 firstPlay = false;
                 SceneManager.LoadScene("LoseScene");
             }
         }
-
+        if (pastLives > lives) {
+            Destroy(sprites[pastLives]);
+            pastLives = lives;
+            MusicSource1.PlayOneShot(MusicClip);
+        }
 
     }
 

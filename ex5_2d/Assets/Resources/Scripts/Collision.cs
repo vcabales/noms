@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collision : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag != "life") {
+        if ((other.tag != "life") && (other.tag != "food")) {
             Debug.Log("detecting collision");
             Debug.Log(other);
             //Destroy(gameObject);
@@ -23,23 +23,5 @@ public class Collision : MonoBehaviour {
             }
         }
 
-    }
-    private void Update()
-    {
-        if (gameObject != null) {
-            var rb = GetComponent<Rigidbody2D>();
-            //Debug.Log(rb.transform.position);
-            if ((rb.transform.position.y < -10f) && Time.time > 5f) // Causing some major issues
-            {
-                Debug.Log("here");
-                if (gameObject)
-                {
-                    Destroy(gameObject);
-                    if (LifeManager.lives > 0)
-                        LifeManager.lives -= 1;
-
-                }
-            }
-        }
     }
 }
