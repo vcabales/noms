@@ -56,16 +56,17 @@ public class ComplimentGenerator : MonoBehaviour {
     public void GenerateNewCompliment() {
         Debug.Log("calling function");
         int r = rand.Next(0, ComplimentList.Length);
-        if (r != last)
-            text.text = ComplimentList[r];
-        else {
-            if (r < ComplimentList.Length)
-                r += 1;
-            else
-                r -= 1;
-            text.text = ComplimentList[r];
-        }
-        last = r;
+        text.text = ComplimentList[r];
+        //if (r != last)
+        //    text.text = ComplimentList[r];
+        //else {
+        //    if (r < ComplimentList.Length)
+        //        r += 1;
+        //    else
+        //        r -= 1;
+        //    text.text = ComplimentList[r];
+        //}
+        //last = r;
             
     }
 }
