@@ -4,4 +4,4 @@ NOMS is a cute little game I made in Unity for my game development class at Nort
 ## Starting the Game
 Make sure you have the latest version of Unity installed. You can start the game by opening up the file `ex5_2d/Assets/Scenes/Menu.unity`. 
 
-[game-image](game_image.png)
+![game-image](game_image.png)
