@@ -44,7 +44,8 @@ public class ComplimentGenerator : MonoBehaviour {
             "Everyone at the laundromat thinks you have the cutest underwear.",
             "You’re more of a superhero than any Marvel character out there.",
             "Whoa, who's that 12 outta 10 person lookin' this way!? Oh, wait. It's you. ;)",
-            "A 3rd tier cable network would totally create a television show about you."
+            "A 3rd tier cable network would totally create a television show about you.",
+            "You are capabale, competent, and creative."
         };
         text = GetComponent<Text>();
         Debug.Log(text);
